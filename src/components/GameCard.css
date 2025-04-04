@@ -1,0 +1,122 @@
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 18rem;
+  min-height: 420px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+
+.game-card-img-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.game-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+
+.game-title {
+  min-height: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 40px;
+  gap: 5px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.tags-container .badge {
+  background-color: #6a0dad !important;
+  color: white !important;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+
+.card-year {
+  font-size: 0.85rem;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+
+.details-btn {
+  background-color: transparent !important;
+  border: 1px solid #5e35b1 !important;
+  color: #5e35b1 !important;
+  flex-grow: 1;
+  padding: 8px;
+}
+
+.details-btn:hover {
+  background-color: #5e35b1 !important;
+  color: white !important;
+}
+
+
+.bookmark-btn {
+  background-color: transparent !important;
+  border: 1px solid #adb5bd !important;
+  color: #adb5bd !important;
+  width: 40px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+
+.bookmark-btn:hover {
+  background-color: #f1f3f5 !important;
+  color: #868e96 !important;
+}
+
+.bookmark-btn.bookmarked {
+  border-color: #f06595 !important;
+  color: #f06595 !important;
+  background-color: #fff0f6 !important;
+}
+
+
+.game-info {
+  width: 100%;
+  text-align: center;
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #555;
+}

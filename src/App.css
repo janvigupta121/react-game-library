@@ -1,0 +1,23 @@
+
+html {
+  background: #36097a !important; 
+  height: 100%;
+}
+
+body {
+  background: inherit !important; 
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  background: transparent !important; 
+  min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative; 
+
+  
+}

@@ -1,0 +1,62 @@
+
+.pre-signin-screen {
+    background: #5e35b1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .pre-signin-screen h1 {
+    font-size: 2.5rem;
+    color: #040304;
+    margin-bottom: 30px;
+
+  }
+  
+  .signin-button {
+    background: #4e2264;
+    color: white;
+    border: none;
+    border:1px solid black;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .signin-button:hover {
+    background: #5a0b9d;
+  }
+  
+ 
+  .signin-form-container {
+    background: #5e35b1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .cl-form {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .cl-formFieldInput {
+    background: #3c3e41 !important;
+    border: 1px solid #343333 !important;
+    color: white !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .cl-formButtonPrimary {
+    width: 100% !important;
+    margin-top: 1rem !important;
+  }

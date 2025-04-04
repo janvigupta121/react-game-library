@@ -1,0 +1,28 @@
+
+
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #09050f;
+    padding: 20px;
+  }
+  
+  .signin-card {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+ 
+  .cl-rootBox {
+    width: 100% !important;
+  }
+  
+  .cl-card {
+    box-shadow: none !important;
+  }
