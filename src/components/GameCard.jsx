@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { Card, Button, Badge } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
@@ -13,7 +15,6 @@ const GameCard = ({ game }) => {
     const totalStars = 5;
     const filledStars = Math.floor(rating);
     const hasHalfStar = rating - filledStars >= 0.5;
-
     const stars = [];
 
     for (let i = 0; i < filledStars; i++) {
@@ -34,9 +35,9 @@ const GameCard = ({ game }) => {
   return (
     <Card className="mb-4 game-card">
       <div className="game-card-img-wrapper">
-        <Card.Img 
-          variant="top" 
-          src={game.background_image || '/placeholder-game.jpg'} 
+        <Card.Img
+          variant="top"
+          src={game.background_image || '/placeholder-game.jpg'}
           className="game-card-img"
         />
       </div>
@@ -44,37 +45,31 @@ const GameCard = ({ game }) => {
       <Card.Body className="d-flex flex-column flex-grow-1 p-3">
         <Card.Title className="game-title">{game.name}</Card.Title>
 
-        
         <div className="tags-container mb-2">
           {game.tags?.slice(0, 3).map(tag => (
-            <Badge 
-              key={tag.id} 
-              className="me-1 mb-1 custom-badge"
-            >
+            <Badge key={tag.id} className="me-1 custom-badge">
               {tag.name}
             </Badge>
           ))}
         </div>
 
-   
         <div className="mt-auto">
           <div className="d-flex justify-content-between align-items-center mb-3">
             <div>{renderStars(game.rating)}</div>
             <small className="text-muted">{game.released?.slice(0, 4) || 'N/A'}</small>
           </div>
 
-
           <div className="d-flex gap-2">
-            <Button 
+            <Button
               className="flex-grow-1 details-btn"
               href={`/game/${game.id}`}
             >
               Details
             </Button>
-            <Button 
+            <Button
               className={`flex-shrink-0 bookmark-btn ${isBookmarked ? 'bookmarked' : ''}`}
-              onClick={() => isBookmarked 
-                ? dispatch(removeBookmark(game.id)) 
+              onClick={() => isBookmarked
+                ? dispatch(removeBookmark(game.id))
                 : dispatch(addBookmark(game))
               }
             >

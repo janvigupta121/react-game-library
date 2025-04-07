@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { SignIn, SignUp, SignedIn, SignedOut } from '@clerk/clerk-react';
@@ -34,7 +35,6 @@ const App = () => {
     </div>
   );
 
- 
   const SignInScreen = () => (
     <div className="signin-form-container">
       <SignIn 
@@ -58,10 +58,9 @@ const App = () => {
 
   return (
     <>
-      <SignedIn>
-        <Header onSearch={handleSearch} />
-      </SignedIn>
       
+      <Header onSearch={handleSearch} />
+
       <Routes>
         <Route 
           path="/" 
@@ -80,19 +79,20 @@ const App = () => {
             </>
           } 
         />
+
         <Route path="/sign-in" element={<SignInScreen />} />
         <Route path="/sign-up" element={<SignUp routing="path" path="/sign-up" />} />
+        
         <Route 
           path="/library" 
           element={
             <>
               <SignedIn><Library /></SignedIn>
-              <SignedOut>
-                <SignInScreen />
-              </SignedOut>
+              <SignedOut><SignInScreen /></SignedOut>
             </>
           } 
         />
+
         <Route path="/game/:id" element={<GameDetailPage />} />
       </Routes>
     </>

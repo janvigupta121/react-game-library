@@ -6,7 +6,9 @@ import { useAuth } from '@clerk/clerk-react';
 import axios from 'axios';
 import Sidebar from '../components/Sidebar';
 import GameCard from '../components/GameCard';
-import './Home.css'; // Importing the CSS file for custom styles
+import './Home.css';
+
+
 
 const Home = ({ searchQuery }) => {
   const { isSignedIn } = useAuth();
